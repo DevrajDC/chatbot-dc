@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: #101825;
+  color: #26acd9;
+  font-family: "Poppins", sans-serif;
+}
+::-webkit-scrollbar {
+  width: 14px;
+  display: none;
+}
+::-webkit-scrollbar-track {
+  background: #101825;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f2f49;
+  /* background: linear-gradient(45deg, #233552, #3f518b); */
+  border-radius: 10px;
+}
+.header {
+  color: rgb(226, 226, 226);
+  background: #1f2f49;
+  border-radius: 0 0 15px 15px;
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+  font-weight: 800;
+  font-size: 22px;
+  font-family: "Philosopher", sans-serif;
+  letter-spacing: 2px;
+  height: 50px;
+  width: 100vw;
+}
+.chat-box {
+  height: calc(100vh - 130px);
+  width: calc(100vw - 100px);
+  margin: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+@media (max-width: 460px) {
+  .chat-box {
+    font-size: 14px;
+    height: calc(100vh - 130px);
+    width: calc(100% - 20px);
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+.text-holder {
+  display: inline-block;
+  width: 100%;
+  margin: 10px 0 0;
+}
+.user-chat {
+  /* background: #1a2434; */
+  border: 2px solid #1a2434;
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 15px;
+  margin-left: auto;
+  right: 0;
+}
+.bot-chat {
+  background: #1a2434;
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 15px;
+  margin-right: auto;
+  left: 0;
+}
+.footer {
+  height: 80px;
+  width: calc(100vw - 100px);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 50px calc(100% - 100px) 50px;
+}
+@media (max-width: 460px) {
+  .footer {
+    width: calc(100% - 20px);
+  }
+}
+.footer img {
+  height: 40px;
+  margin: auto;
+  cursor: pointer;
+}
+.footer img:hover {
+  border: 2px solid #2f476e;
+  border-radius: 50%;
+}
+.footer .message-input {
+  height: 40px;
+  border: none;
+  outline: none;
+  width: 100%;
+  margin: auto;
+  padding: 0 10px;
+  color: #26acd9;
+  resize: none;
+  border-radius: 10px;
+  background: #1a2434;
+}
+.footer ::placeholder {
+  color: #376a7a;
+}
+
+.footer ::-ms-input-placeholder {
+  color: #376a7a;
+}
